@@ -11,18 +11,85 @@
     <link rel="icon" href="images/1664117287.ico"> 
 </head>
 <body>
-    <iframe id="music" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWV2mRphxMWjR?utm_source=generator" width="100%" height="300" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-    <img id="imagright" src="images/101128444_p0.png" alt="">
+    <div id="music">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWV2mRphxMWjR?utm_source=generator" width="100%" height="300" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        <img id="imagright" src="images/101128444_p0.png" alt="音樂圖">
+    </div>
+    
     <dvi id="wrapper">
         <div id="main">
             <div id="nav"></div>
             <div id="header">
-                <img src="images/100603563_p0.jpg" alt="主頁大圖" id="header-img">
+                <img ondragstart="return false" src="images/100603563_p0.jpg" alt="主頁大圖" id="header-img">
             </div>
-            <div id="content"></div>
+            <div id="content">
+                <ul id="mv">
+                    <li id="mv-1">MV</li>
+                    <li id="diary-1">Diary</li>
+                </ul>
+                <ul id="gallery">
+                    <li class="ga-1"><div class="ga-mv">
+                        <a href=""><div class="box"><img src="images/sddefault1.jpg" alt=""></div><span>『新時代』/ “NEW GENESIS”</span></a>
+                        <div class="more"><a href="">info »</a></div>
+                    </div></li>
+                    <li class="ga-1"><div class="ga-mv">
+                        <a href=""><div class="box"><img src="images/sddefault2.jpg" alt=""></div><span>『私は最強』/ “I’m invincible”</span></a>
+                        <div class="more"><a href="">info »</a></div>
+                    </div></li>
+                    <li class="ga-1"><div class="ga-mv">
+                        <a href=""><div class="box"><img src="images/sddefault3.jpg" alt=""></div><span>『逆光』/ “Backlight”</span></a>
+                        <div class="more"><a href="">info »</a></div>
+                    </div></li>
+                    <li class="ga-1"><div class="ga-mv">
+                        <a href=""><div class="box"><img src="images/sddefault4.jpg" alt=""></div><span>『ウタカタララバイ』/ “fleeting lullaby”</span></a>
+                        <div class="more"><a href="">info »</a></div>
+                    </div></li>
+                    <li class="ga-1"><div class="ga-mv">
+                        <a href=""><div class="box"><img src="images/sddefault5.jpg" alt=""></div><span>『世界のつづき』/ “The Worlds Continuation”</span></a>
+                        <div class="more"><a href="">info »</a></div>
+                    </div></li>
+                    <li class="ga-1"><div class="ga-mv">
+                        <a href=""><div class="box"><img src="images/sddefault6.jpg" alt=""></div><span>Tot Musica</span></a>
+                        <div class="more"><a href="">info »</a></div>
+                    </div></li>
+                    <li class="ga-1"><div class="ga-mv">
+                        <a href=""><div class="box"><img src="images/sddefault7.jpg" alt=""></div><span>『風のゆくえ』/ “Where the Wind Blows”</span></a>
+                        <div class="more"><a href="">info »</a></div>
+                    </div></li>
+
+
+                    <li class="diary"><div class="ga-mv">
+                        <a href=""><div class="box"><img src="images/diary1.jpg" alt=""></div><span>#1 配信はじめるよー！</span></a>
+                    </div></li>
+                    <li class="diary"><div class="ga-mv">
+                        <a href=""><div class="box"><img src="images/diary2.jpg" alt=""></div><span>#2 私は最強 語っちゃうよー！</span></a>
+                    </div></li>
+                    <li class="diary"><div class="ga-mv">
+                        <a href=""><div class="box"><img src="images/diary3.jpg" alt=""></div><span>#3 とおっ！！</span></a>
+                    </div></li>
+                    <li class="diary"><div class="ga-mv">
+                        <a href=""><div class="box"><img src="images/diary4.jpg" alt=""></div><span>#4 パパッと早着替え！</span></a>
+                    </div></li>
+                    <li class="diary"><div class="ga-mv">
+                        <a href=""><div class="box"><img src="images/diary5.jpg" alt=""></div><span>#5 何！？今の音！？</span></a>
+                    </div></li>
+                    <li class="diary"><div class="ga-mv">
+                        <a href=""><div class="box"><img src="images/diary6.jpg" alt=""></div><span>#6 会場で会おー！！</span></a>
+                    </div></li>
+                </ul>
+            </div>
             <div id="banner"></div>
             <div id="footer"></div>
         </div>
     </dvi>
+    <div id="bg-mov">
+        <div id="bg-movie">
+            <video class="video" muted="" autoplay="" loop="" playsinline="">
+                <source src="images/bg.mov" type="video/mp4">
+              </video>
+        </div>
+    </div>
+<script type="text/javascript" src="scripts/jquery-3.6.1.js"></script>
+<script type="text/javascript" src="scripts/script.js"></script>
 </body>
 </html>
