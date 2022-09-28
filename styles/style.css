@@ -1,3 +1,11 @@
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+}
+
 a {
   text-decoration: none;
   line-height: 0;
@@ -107,6 +115,11 @@ img {
   transform: scale(1.4, 1.4);
 }
 
+@media (max-width: 1500px) {
+  #music {
+    display: none;
+  }
+}
 #music {
   position: fixed;
   right: -45px;
@@ -168,11 +181,25 @@ img {
   max-width: 1300px;
 }
 
-#meua {
+#menu {
+  z-index: 2;
   position: fixed;
+  left: -20px;
 }
-#meua li {
+#menu .ul-menu .li-menu {
+  padding: 10px 0px;
   list-style: none;
+}
+#menu .ul-menu .li-menu a {
+  color: rgba(230, 121, 144, 0.836);
+}
+#menu .ul-menu .li-menu:hover {
+  transition: 0.8s;
+  margin-left: 5px;
+}
+#menu .ul-menu .li-menu:hover a {
+  transition: 0.8s;
+  color: rgb(255, 21, 138);
 }
 
 #header {
@@ -233,4 +260,118 @@ img {
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
+}
+
+#commodity img {
+  width: 100%;
+  height: auto;
+}
+
+#buy-car {
+  z-index: 2;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 200px;
+}
+#buy-car .car-name {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+#buy-car .car {
+  background: rgba(255, 0, 0, 0.178);
+  width: 100%;
+}
+#buy-car .total {
+  background: rgba(255, 0, 0, 0.342);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#buy-car .total p {
+  margin-right: 10px;
+}
+
+.ul-buy {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  height: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.ul-buy .li-buy {
+  border-style: double;
+  border-width: 5px;
+  border-color: rgba(98, 0, 255, 0.541);
+  list-style: none;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.ul-buy .li-buy .carCenter {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  margin: 0px 5px;
+}
+.ul-buy .li-buy .carMoney {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+.ul-buy .li-buy .carMoney p {
+  margin: 0px;
+}
+
+.ul-comm {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  height: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.ul-comm .li-comm {
+  border-style: double;
+  border-width: 5px;
+  border-color: rgba(98, 0, 255, 0.541);
+  margin: 10px;
+  list-style: none;
+  text-align: center;
+  width: 22%;
+  height: 100%;
+}
+.ul-comm .li-comm .comm-name {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.ul-comm .li-comm .comm-name span {
+  margin: 10px;
+  color: blue;
+  font-size: 20px;
+}
+.ul-comm .li-comm .comm-name p {
+  margin: 10px;
+  color: red;
+  font-size: 20px;
+}
+.ul-comm .li-comm .comm-buy {
+  margin-bottom: 5px;
 }/*# sourceMappingURL=style.css.map */
