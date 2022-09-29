@@ -25,7 +25,7 @@
         <div class="car-name"><p>購物車</p></div>
         <div class="car">
             <ul class="ul-buy">
-                <li class="li-buy">
+                <!-- <li class="li-buy">
                         <div class="carCenter"><p>商品名稱</p></div>
                         <div class="carMoney "><p>1個</p><p>9999$</p></div>
                         <div class="carCenter"><button>移除</button></div>
@@ -41,12 +41,12 @@
                 <div class="carCenter"><p>商品名稱</p></div>
                 <div class="carMoney "><p>5個</p><p>9999$</p></div>
                 <div class="carCenter"><button>移除</button></div>
-            </li>
+            </li> -->
 
             </ul>
         </div>
 
-        <div class="total"><p>總共金額：0000$</p><button>結算</button></div>
+        <div class="total"><p>總共金額：0 $</p><button>結算</button></div>
     </div>
 
 
@@ -54,19 +54,38 @@
         <div id="main">
             <div id="commodity">
                 <ul class="ul-comm">
-                    <li class="li-comm">
+                    <!-- 新商品須將comA0000修改成該商品的ID，並在JS頁面增加該商品的編號及調整金額 -->
+                    <!-- <li class="li-comm">
                         <div>
                             <a href=""><img src="images/99023925_p1.png" alt=""></a>
-                            <div class="comm-name"><span>商品名稱</span><p>9999$</p></div>
+                            <div class="comm-name"><span>商品名稱</span><p>100$</p></div>
                             <div class="comm-buy">
-                            <select class="Qua">
+                            <select class="Qua comA0000">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
-                            <button>加入購物車</button>
+                            <button id="comA0000">加入購物車</button>
+                            </div>
+                        </div>
+                    </li> -->
+
+
+                    <li class="li-comm">
+                        <div>
+                            <a href=""><img src="images/99023925_p1.png" alt=""></a>
+                            <div class="comm-name"><span>衣服</span><p>200$</p></div>
+                            <div class="comm-buy">
+                            <select class="Qua comA0001">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <button id="comA0001">加入購物車</button>
                             </div>
                         </div>
                     </li>
@@ -74,16 +93,16 @@
                     <li class="li-comm">
                         <div>
                             <a href=""><img src="images/99023925_p1.png" alt=""></a>
-                            <div class="comm-name"><span>商品名稱</span><p>9999$</p></div>
+                            <div class="comm-name"><span>褲子</span><p>300$</p></div>
                             <div class="comm-buy">
-                            <select class="Qua">
+                            <select class="Qua comA0002">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
-                            <button>加入購物車</button>
+                            <button id="comA0002">加入購物車</button>
                             </div>
                         </div>
                     </li>
@@ -91,16 +110,16 @@
                     <li class="li-comm">
                         <div>
                             <a href=""><img src="images/99023925_p1.png" alt=""></a>
-                            <div class="comm-name"><span>商品名稱</span><p>9999$</p></div>
+                            <div class="comm-name"><span>帽子</span><p>100$</p></div>
                             <div class="comm-buy">
-                            <select class="Qua">
+                            <select class="Qua comA0003">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
-                            <button>加入購物車</button>
+                            <button id="comA0003">加入購物車</button>
                             </div>
                         </div>
                     </li>
@@ -108,16 +127,50 @@
                     <li class="li-comm">
                         <div>
                             <a href=""><img src="images/99023925_p1.png" alt=""></a>
-                            <div class="comm-name"><span>商品名稱</span><p>9999$</p></div>
+                            <div class="comm-name"><span>鞋子</span><p>500$</p></div>
                             <div class="comm-buy">
-                            <select class="Qua">
+                            <select class="Qua comA0004">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
-                            <button>加入購物車</button>
+                            <button id="comA0004">加入購物車</button>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="li-comm">
+                        <div>
+                            <a href=""><img src="images/99023925_p1.png" alt=""></a>
+                            <div class="comm-name"><span>商品名稱</span><p>100$</p></div>
+                            <div class="comm-buy">
+                            <select class="Qua comA0000">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <button id="comA0000">加入購物車</button>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="li-comm">
+                        <div>
+                            <a href=""><img src="images/99023925_p1.png" alt=""></a>
+                            <div class="comm-name"><span>商品名稱</span><p>100$</p></div>
+                            <div class="comm-buy">
+                            <select class="Qua comA0000">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <button id="comA0000">加入購物車</button>
                             </div>
                         </div>
                     </li>

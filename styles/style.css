@@ -374,4 +374,9 @@ img {
 }
 .ul-comm .li-comm .comm-buy {
   margin-bottom: 5px;
+}
+@media (max-width: 780px) {
+  .ul-comm .li-comm {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
