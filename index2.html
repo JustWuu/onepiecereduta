@@ -25,58 +25,46 @@
         <div class="car-name"><p>購物車</p></div>
         <div class="car">
             <ul class="ul-buy">
-                <!-- <li class="li-buy">
-                        <div class="carCenter"><p>商品名稱</p></div>
-                        <div class="carMoney "><p>1個</p><p>9999$</p></div>
-                        <div class="carCenter"><button>移除</button></div>
-                </li>
-
-                <li class="li-buy">
-                    <div class="carCenter"><p>商品名稱</p></div>
-                    <div class="carMoney "><p>3個</p><p>9999$</p></div>
-                    <div class="carCenter"><button>移除</button></div>
-                </li>
-
-            <li class="li-buy">
-                <div class="carCenter"><p>商品名稱</p></div>
-                <div class="carMoney "><p>5個</p><p>9999$</p></div>
-                <div class="carCenter"><button>移除</button></div>
-            </li> -->
-
             </ul>
         </div>
 
-        <div class="total"><p>總共金額：0 $</p><button>結算</button></div>
+        <div class="total"><p>總共金額：0 $</p><button onclick="clicktotal()">結算</button></div>
     </div>
 
+    <div id="wrapper" class="topexhibit" >
+        <!-- style="display: none;" -->
+    <div id="exhibit" >
+        <div id="info" style="display: none;">
+            <div class="info-img"><img src="images/99023925_p1.png" alt=""></div>
+            <div class="info-p"><p></p><p></p><p></p></div>
+        </div>
+
+        <div id="bill" >
+            <!-- style="display: none;" -->
+            <div class="bill-buycar">
+                <div >
+                <ul class="ul-buy">
+                </ul>
+                </div>
+                <div class="total"><p>總共金額：0 $</p></div>
+            </div>
+            <div id="pay-data">輸入付費及收件資料</div>
+            <button>送出訂單</button>
+        </div>
+        <button class="closeExh" onclick="closeExh()">關閉</button>
+    </div>
+    </div>
 
     <dvi id="wrapper">
         <div id="main">
             <div id="commodity">
                 <ul class="ul-comm">
-                    <!-- 新商品須將comA0000修改成該商品的ID，並在JS頁面增加該商品的編號及調整金額 -->
-                    <!-- <li class="li-comm">
-                        <div>
-                            <a href=""><img src="images/99023925_p1.png" alt=""></a>
-                            <div class="comm-name"><span>商品名稱</span><p>100$</p></div>
-                            <div class="comm-buy">
-                            <select class="Qua comA0000">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                            <button id="comA0000">加入購物車</button>
-                            </div>
-                        </div>
-                    </li> -->
-
 
                     <li class="li-comm">
                         <div>
-                            <a href=""><img src="images/99023925_p1.png" alt=""></a>
-                            <div class="comm-name"><span>衣服</span><p>200$</p></div>
+                            <a onclick='clickImg("A0001")'><img src="images/99023925_p1.png" alt=""></a>
+                            <div class="comm-name"><span class="A0001-name">衣服</span><p class="A0001-money">200</p><p>$</p></div>
+                            <p style="display: none;" class="A0001-info">UTA特製商品，日本空運版，錯過再也買不到！</p>
                             <div class="comm-buy">
                             <select class="Qua comA0001">
                                 <option value="1">1</option>
@@ -85,15 +73,16 @@
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
-                            <button id="comA0001">加入購物車</button>
+                            <button id="comA0001" onclick='buyclick("A0001")'>加入購物車</button>
                             </div>
                         </div>
                     </li>
 
                     <li class="li-comm">
                         <div>
-                            <a href=""><img src="images/99023925_p1.png" alt=""></a>
-                            <div class="comm-name"><span>褲子</span><p>300$</p></div>
+                            <a onclick='clickImg("A0002")'><img src="images/99023925_p1.png" alt=""></a>
+                            <div class="comm-name"><span class="A0002-name">褲子</span><p class="A0002-money">300</p><p>$</p></div>
+                            <p style="display: none;" class="A0002-info">褲子褲子！好穿的褲子！</p>
                             <div class="comm-buy">
                             <select class="Qua comA0002">
                                 <option value="1">1</option>
@@ -102,15 +91,16 @@
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
-                            <button id="comA0002">加入購物車</button>
+                            <button id="comA0002" onclick='buyclick("A0002")'>加入購物車</button>
                             </div>
                         </div>
                     </li>
 
                     <li class="li-comm">
                         <div>
-                            <a href=""><img src="images/99023925_p1.png" alt=""></a>
-                            <div class="comm-name"><span>帽子</span><p>100$</p></div>
+                            <a onclick='clickImg("A0003")'><img src="images/99023925_p1.png" alt=""></a>
+                            <div class="comm-name"><span class="A0003-name">帽子</span><p class="A0003-money">100</p><p>$</p></div>
+                            <p style="display: none;" class="A0003-info">頭頂涼涼的嗎？買頂好看的帽子吧！</p>
                             <div class="comm-buy">
                             <select class="Qua comA0003">
                                 <option value="1">1</option>
@@ -119,15 +109,16 @@
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
-                            <button id="comA0003">加入購物車</button>
+                            <button id="comA0003" onclick='buyclick("A0003")'>加入購物車</button>
                             </div>
                         </div>
                     </li>
 
                     <li class="li-comm">
                         <div>
-                            <a href=""><img src="images/99023925_p1.png" alt=""></a>
-                            <div class="comm-name"><span>鞋子</span><p>500$</p></div>
+                            <a onclick='clickImg("A0004")'><img src="images/99023925_p1.png" alt=""></a>
+                            <div class="comm-name"><span class="A0004-name">鞋子</span><p class="A0004-money">500</p><p>$</p></div>
+                            <p style="display: none;" class="A0004-info">NONO！你的鞋子不優喔，當季最好看的鞋子在這裡！</p>
                             <div class="comm-buy">
                             <select class="Qua comA0004">
                                 <option value="1">1</option>
@@ -136,44 +127,133 @@
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
-                            <button id="comA0004">加入購物車</button>
+                            <button id="comA0004" onclick='buyclick("A0004")'>加入購物車</button>
                             </div>
                         </div>
                     </li>
 
                     <li class="li-comm">
                         <div>
-                            <a href=""><img src="images/99023925_p1.png" alt=""></a>
-                            <div class="comm-name"><span>商品名稱</span><p>100$</p></div>
+                            <a onclick='clickImg("A0005")'><img src="images/99023925_p1.png" alt=""></a>
+                            <!-- 下方需修改編號 -->
+                            <div class="comm-name"><span class="A0005-name">應援光棒</span><p class="A0005-money">800</p><p>$</p></div>
+                            <p style="display: none;" class="A0005-info">參加演唱會怎麼能沒有螢光棒呢？！</p>
+                            <!-- 需修改編號 -->
                             <div class="comm-buy">
-                            <select class="Qua comA0000">
+                            <!-- 下方需修改編號 -->
+                            <select class="Qua comA0005">
+                            <!-- 需修改編號 -->
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
-                            <button id="comA0000">加入購物車</button>
+                            <!-- 下方需修改編號 -->
+                            <button id="comA0005" onclick='buyclick("A0005")'>加入購物車</button>
+                            <!-- 需修改編號 -->
                             </div>
                         </div>
                     </li>
 
                     <li class="li-comm">
                         <div>
-                            <a href=""><img src="images/99023925_p1.png" alt=""></a>
-                            <div class="comm-name"><span>商品名稱</span><p>100$</p></div>
+                            <a onclick='clickImg("A0006")'><img src="images/99023925_p1.png" alt=""></a>
+                            <!-- 下方需修改編號 -->
+                            <div class="comm-name"><span class="A0006-name">紀念海報</span><p class="A0006-money">1000</p><p>$</p></div>
+                            <p style="display: none;" class="A0006-info">這張A4彩色印刷的紙就叫做海報喔</p>
+                            <!-- 需修改編號 -->
                             <div class="comm-buy">
-                            <select class="Qua comA0000">
+                            <!-- 下方需修改編號 -->
+                            <select class="Qua comA0006">
+                            <!-- 需修改編號 -->
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
-                            <button id="comA0000">加入購物車</button>
+                            <!-- 下方需修改編號 -->
+                            <button id="comA0006" onclick='buyclick("A0006")'>加入購物車</button>
+                            <!-- 需修改編號 -->
                             </div>
                         </div>
                     </li>
+
+                    <li class="li-comm">
+                        <div>
+                            <a onclick='clickImg("A0007")'><img src="images/99023925_p1.png" alt=""></a>
+                            <!-- 下方需修改編號 -->
+                            <div class="comm-name"><span class="A0007-name">親筆簽名資格</span><p class="A0007-money">20000</p><p>$</p></div>
+                            <p style="display: none;" class="A0007-info">UTA為你在任何地方簽名！</p>
+                            <!-- 需修改編號 -->
+                            <div class="comm-buy">
+                            <!-- 下方需修改編號 -->
+                            <select class="Qua comA0007">
+                            <!-- 需修改編號 -->
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <!-- 下方需修改編號 -->
+                            <button id="comA0007" onclick='buyclick("A0007")'>加入購物車</button>
+                            <!-- 需修改編號 -->
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="li-comm">
+                        <div>
+                            <a onclick='clickImg("A0008")'><img src="images/99023925_p1.png" alt=""></a>
+                            <!-- 下方需修改編號 -->
+                            <div class="comm-name"><span class="A0008-name">一日約會卷</span><p class="A0008-money">88888</p><p>$</p></div>
+                            <p style="display: none;" class="A0008-info">想跟UTA去哪玩呢？</p>
+                            <!-- 需修改編號 -->
+                            <div class="comm-buy">
+                            <!-- 下方需修改編號 -->
+                            <select class="Qua comA0008">
+                            <!-- 需修改編號 -->
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <!-- 下方需修改編號 -->
+                            <button id="comA0008" onclick='buyclick("A0008")'>加入購物車</button>
+                            <!-- 需修改編號 -->
+                            </div>
+                        </div>
+                    </li>
+
+
+
+                    <li class="li-comm">
+                        <div>
+                            <a onclick='clickImg("C01")'><img src="images/99023925_p1.png" alt=""></a>
+                            <!-- 下方需修改編號 -->
+                            <div class="comm-name"><span class="C01-name">隱藏商品</span><p class="C01-money">999999</p><p>$</p></div>
+                            <p style="display: none;" class="C01-info">這...是甚麼</p>
+                            <!-- 需修改編號 -->
+                            <div class="comm-buy">
+                            <!-- 下方需修改編號 -->
+                            <select class="Qua comC01">
+                            <!-- 需修改編號 -->
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <!-- 下方需修改編號 -->
+                            <button id="comC01" onclick='buyclick("C01")'>加入購物車</button>
+                            <!-- 需修改編號 -->
+                            </div>
+                        </div>
+                    </li>
+
                     
                 </ul>
             </div>
