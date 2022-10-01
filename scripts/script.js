@@ -82,8 +82,8 @@ function closeExh(){
 }
 
 function clickImg(ID){
-    $("#info").html(`<div class="info-img"><img src="images/99023925_p1.png" alt=""></div>
-    <div class="info-p"><p>${$(`.${ID}-name`).text()}</p><p>${$(`.${ID}-info`).text()}</p><p>${$(`.${ID}-money`).text()}$</p></div>`)
+    $("#info").html(`<div class="info-img"><img src="images/${ID}.jpg" alt="圖片...不見了！"></div>
+    <div class="info-p"><p>${$(`.${ID}-name`).text()}</p><p>${$(`.${ID}-info`).text()}</p><p>${$(`.${ID}-money`).text()} $</p></div>`)
     $(".topexhibit").css("display", "flex");
     $("#info").css("display", "flex");
 }

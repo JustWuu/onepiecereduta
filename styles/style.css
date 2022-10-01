@@ -310,9 +310,8 @@ img {
   align-content: center;
 }
 .ul-buy .li-buy {
-  border-style: double;
-  border-width: 5px;
-  border-color: rgba(98, 0, 255, 0.541);
+  border-style: outset;
+  border-width: 2px;
   list-style: none;
   text-align: center;
   width: 100%;
@@ -406,24 +405,56 @@ img {
 }
 #exhibit .closeExh {
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 20px;
+  right: 20px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+#exhibit .closeExh i {
+  color: red;
 }
 
 #bill {
-  border-style: double;
-  border-width: 5px;
-  border-color: rgba(255, 123, 0, 0.705);
-  width: 400px;
+  padding: 5px;
+  width: 300px;
   height: auto;
-  background: rgb(165, 165, 165);
+  background: linear-gradient(30deg, #CCFFFF, #f9f);
   flex-wrap: wrap;
+  border-radius: 5px;
+}
+#bill hr {
+  width: 90%;
+}
+#bill #pay-form {
+  text-align: center;
+  width: 100%;
+}
+#bill #pay-form p {
+  margin: 0 0 10px 0;
+}
+#bill #pay-form input {
+  margin: 0 0 10px 0;
+}
+#bill #pay-form select {
+  margin: 0 0 10px 0;
+}
+#bill #pay-form textarea {
+  resize: none;
 }
 #bill .bill-buycar {
   width: 100%;
 }
 #bill #pay-data {
   width: 100%;
+}
+#bill .ul-buy {
+  justify-content: flex-end;
+}
+#bill .ul-buy .li-buy {
+  margin: 0 0 10px 0;
+  border-style: none;
+  justify-content: flex-end;
 }
 #bill .total {
   width: 100%;
@@ -437,7 +468,7 @@ img {
 }
 
 #info {
-  background: rgb(121, 121, 121);
+  background: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -448,9 +479,16 @@ img {
 }
 #info .info-img {
   width: 50%;
+  height: 600px;
+  padding: 10px;
 }
 #info .info-img img {
-  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 100%;
+  height: 100%;
+  margin: auto;
+  display: block;
 }
 #info .info-p {
   display: flex;

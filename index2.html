@@ -14,10 +14,7 @@
 <body>
     <div id="menu">
         <ul class="ul-menu">
-            <li class="li-menu" title="主頁"><a href="#header"><i class="fa-solid fa-house fa-xl"></i></a></li>
-            <li class="li-menu" title="音樂"><a href="#content"><i class="fa-solid fa-music fa-xl"></i></a></li>
-            <li class="li-menu" title="Pixiv同人"><a href="#banner"><i class="fa-solid fa-heart fa-xl"></i></a></li>
-            <li class="li-menu" title="周邊商品"><a href="index.html"><i class="fa-solid fa-cart-shopping fa-xl"></i></a></li>
+            <li class="li-menu" title="周邊商品"><a href="index.html"><i class="fa-solid fa-rotate-right fa-xl"></i></a></li>
         </ul>
     </div>
 
@@ -31,7 +28,7 @@
         <div class="total"><p>總共金額：0 $</p><button onclick="clicktotal()">結算</button></div>
     </div>
 
-    <div id="wrapper" class="topexhibit" >
+    <div id="wrapper" class="topexhibit" style="display: none;">
         <!-- style="display: none;" -->
     <div id="exhibit" >
         <div id="info" style="display: none;">
@@ -39,7 +36,7 @@
             <div class="info-p"><p></p><p></p><p></p></div>
         </div>
 
-        <div id="bill" >
+        <div id="bill" style="display: none;">
             <!-- style="display: none;" -->
             <div class="bill-buycar">
                 <div >
@@ -48,10 +45,29 @@
                 </div>
                 <div class="total"><p>總共金額：0 $</p></div>
             </div>
-            <div id="pay-data">輸入付費及收件資料</div>
-            <button>送出訂單</button>
+            <hr>
+            <form id="pay-form" action="">
+                <p>請輸入收件資料</p>
+                <label for="pay-name" id="name-label">姓名</label><br>
+                <input id="pay-name" type="text" placeholder="姓名" required>
+                <br>
+                <label for="pay-email" id="email-label">信箱</label><br>
+                <input id="pay-email" type="email" placeholder="信箱" required>
+                <br>
+                <label for="pay-tote" id="name-label">到府時間</label><br>
+                <select id="pay-tote">
+                <option>任何時間皆可</option>
+                <option>13:00之前</option>
+                <option>13:00-17:00之間</option>
+                </select>
+                <br>
+                <label for="pay-text" id="name-label">備註</label><br>
+                <textarea id="pay-text"></textarea><br>
+                <button>送出訂單</button>
+            </form>
+
         </div>
-        <button class="closeExh" onclick="closeExh()">關閉</button>
+        <button class="closeExh" onclick="closeExh()"><i class="fa-solid fa-xmark fa-xl"></i></button>
     </div>
     </div>
 
@@ -62,7 +78,7 @@
 
                     <li class="li-comm">
                         <div>
-                            <a onclick='clickImg("A0001")'><img src="images/99023925_p1.png" alt=""></a>
+                            <a onclick='clickImg("A0001")'><img src="images/A0001.jpg" alt=""></a>
                             <div class="comm-name"><span class="A0001-name">衣服</span><p class="A0001-money">200</p><p>$</p></div>
                             <p style="display: none;" class="A0001-info">UTA特製商品，日本空運版，錯過再也買不到！</p>
                             <div class="comm-buy">
@@ -80,7 +96,7 @@
 
                     <li class="li-comm">
                         <div>
-                            <a onclick='clickImg("A0002")'><img src="images/99023925_p1.png" alt=""></a>
+                            <a onclick='clickImg("A0002")'><img src="images/A0002.jpg" alt=""></a>
                             <div class="comm-name"><span class="A0002-name">褲子</span><p class="A0002-money">300</p><p>$</p></div>
                             <p style="display: none;" class="A0002-info">褲子褲子！好穿的褲子！</p>
                             <div class="comm-buy">
@@ -98,7 +114,7 @@
 
                     <li class="li-comm">
                         <div>
-                            <a onclick='clickImg("A0003")'><img src="images/99023925_p1.png" alt=""></a>
+                            <a onclick='clickImg("A0003")'><img src="images/A0003.jpg" alt=""></a>
                             <div class="comm-name"><span class="A0003-name">帽子</span><p class="A0003-money">100</p><p>$</p></div>
                             <p style="display: none;" class="A0003-info">頭頂涼涼的嗎？買頂好看的帽子吧！</p>
                             <div class="comm-buy">
@@ -116,7 +132,7 @@
 
                     <li class="li-comm">
                         <div>
-                            <a onclick='clickImg("A0004")'><img src="images/99023925_p1.png" alt=""></a>
+                            <a onclick='clickImg("A0004")'><img src="images/A0004.jpg" alt=""></a>
                             <div class="comm-name"><span class="A0004-name">鞋子</span><p class="A0004-money">500</p><p>$</p></div>
                             <p style="display: none;" class="A0004-info">NONO！你的鞋子不優喔，當季最好看的鞋子在這裡！</p>
                             <div class="comm-buy">
@@ -134,7 +150,7 @@
 
                     <li class="li-comm">
                         <div>
-                            <a onclick='clickImg("A0005")'><img src="images/99023925_p1.png" alt=""></a>
+                            <a onclick='clickImg("A0005")'><img src="images/A0005.jpg" alt=""></a>
                             <!-- 下方需修改編號 -->
                             <div class="comm-name"><span class="A0005-name">應援光棒</span><p class="A0005-money">800</p><p>$</p></div>
                             <p style="display: none;" class="A0005-info">參加演唱會怎麼能沒有螢光棒呢？！</p>
@@ -158,7 +174,7 @@
 
                     <li class="li-comm">
                         <div>
-                            <a onclick='clickImg("A0006")'><img src="images/99023925_p1.png" alt=""></a>
+                            <a onclick='clickImg("A0006")'><img src="images/A0006.jpg" alt=""></a>
                             <!-- 下方需修改編號 -->
                             <div class="comm-name"><span class="A0006-name">紀念海報</span><p class="A0006-money">1000</p><p>$</p></div>
                             <p style="display: none;" class="A0006-info">這張A4彩色印刷的紙就叫做海報喔</p>
