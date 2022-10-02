@@ -265,6 +265,11 @@ img{
     justify-content: center;    
     align-content: center;      
     flex-wrap: wrap;
+    p{
+        width: 100%;
+        text-align: center;
+        margin: 6px;
+    }
 }
 
 

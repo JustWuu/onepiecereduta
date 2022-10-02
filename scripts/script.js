@@ -66,7 +66,7 @@ function closeExh(){
 }
 
 function clickImg(ID){
-    $("#info").html(`<div class="info-img"><img src="images/${ID}.jpg" alt="圖片...不見了！"></div>
+    $("#info").html(`<div class="info-img"><img src="images/${ID}.jpg" alt="這商品竟然不附圖！"></div>
     <div class="info-p"><p>${$(`.${ID}-name`).text()}</p><p>${$(`.${ID}-info`).text()}</p><p>${$(`.${ID}-money`).text()} $</p></div>`)
     $(".topexhibit").css("display", "flex");
     $("#info").css("display", "flex");

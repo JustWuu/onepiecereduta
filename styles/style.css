@@ -262,6 +262,11 @@ img {
   align-content: center;
   flex-wrap: wrap;
 }
+#footer p {
+  width: 100%;
+  text-align: center;
+  margin: 6px;
+}
 
 #commodity img {
   width: 100%;
