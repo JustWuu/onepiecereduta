@@ -168,6 +168,7 @@ img{
     justify-content: center;
     align-items: center;
     margin: 0px;
+    flex-direction: column;
 }
 #main{
     border-style:double;
@@ -292,6 +293,7 @@ img{
         justify-content: center;    
         align-content: center;     
         width: 100%;
+        background:rgba(111, 0, 255, 0.178);
     }
     .car{
         background:rgba(255, 0, 0, 0.178);
@@ -310,6 +312,22 @@ img{
         }
     }
 }
+
+@media (max-width: 1600px) { 
+    #buy-car{
+        z-index: 2;
+        position:static;
+        display: flex; 
+        justify-content: center;    
+        align-content: center;     
+        flex-wrap: wrap;
+        width: 80%;
+        max-width: 1300px;
+        margin-bottom: 10px;
+        }
+}
+
+
 
 .ul-buy{
     display:flex;
@@ -421,13 +439,14 @@ img{
     height: 100%;
     .closeExh{
         position:fixed;
-        top: 20px;
+        top: 30px;
         right: 20px;
         border:0;
         background:none ;
         cursor: pointer;
         i{
             color:red;
+            font-size: 3em;
         }
     }
 }
@@ -502,7 +521,7 @@ img{
     border-radius:20px;
     .info-img{
         width: 50%;
-        height: 600px;
+        height: auto;
         padding: 10px;
 
         img{

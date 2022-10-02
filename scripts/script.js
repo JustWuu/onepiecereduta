@@ -58,22 +58,6 @@ function buyclick(ID){
 }
 // 
 
-
-// 每個商品
-// $("#comA0001").click(function(){
-//     comStatistics(car,{comName:"衣服",comID:"A0001",comQua:Number($(".comA0001").val()),money:Number($(".comA0001").val())*200})
-//     console.log(car)
-//     window.alert("已加入購物車")
-// }); 
-
-// $("#comA0002").click(function(){
-//     comStatistics(car,{comName:"褲子",comID:"A0002",comQua:Number($(".comA0002").val()),money:Number($(".comA0002").val())*300})
-//     console.log(car)
-//     window.alert("已加入購物車")
-// }); 
-// 每個商品結束
-
-
 // 展示
 function closeExh(){
     $(".topexhibit").css("display", "none");
